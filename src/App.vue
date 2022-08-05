@@ -40,7 +40,8 @@ export default {
     changeLang (lang) {
       this.lang = this.langList[lang]
       localStorage.setItem('lang', lang)
-      setLocale(lang)
+      setLocale(lang) //* 設定表單驗證語系
+      this.$i18n.locale = lang //* 設定i18n 語系
     }
   },
   mounted () {

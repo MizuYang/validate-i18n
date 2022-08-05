@@ -5,9 +5,11 @@ const en = {
     tel: 'tel',
     email: 'email',
     upload1: 'upload photo (150kb)',
-    upload1Span: 'Heic image cannot be verified',
+    upload1Samll: 'Use official validation rules',
+    upload1Span: 'Image cannot be verified Heic',
     upload2: 'upload photo (150kb)',
-    upload2Span: 'Can upload Heic file',
+    upload2Samll: 'Custom Authentication File Type',
+    upload2Span: 'Heic files can be uploaded',
     btn: 'submit'
   }
 

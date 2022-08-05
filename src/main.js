@@ -10,14 +10,15 @@ import { required, email, min, max, size, mimes } from '@vee-validate/rules'
 import { isPhone, isImage } from '../validate/rules'
 
 // 匯入多國語系的功能
-import { localize, setLocale } from '@vee-validate/i18n'
+import { localize } from '@vee-validate/i18n'
+// import { localize, setLocale } from '@vee-validate/i18n'
 
 // 匯入表單驗證語系
 import tw from '../validate/i18n/zh-TW.json'
 import en from '../validate/i18n/en-US.json'
 import ja from '../validate/i18n/ja-JP.json'
 
-import i18n from '../i18n/lang' //* 多國語系
+import i18n from '../i18n/lang.js' //* 多國語系
 
 import App from './App.vue'
 import router from './router'
@@ -48,7 +49,7 @@ configure({
 
 })
 // 設定預設語系
-setLocale('zh-TW')
+// setLocale('zh-TW')
 
 const app = createApp(App)
 

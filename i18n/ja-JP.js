@@ -1,14 +1,16 @@
 const ja = {
-  title: '教師資料登錄',
+  title: '教師プロフィールのログイン',
   form: {
-    name: '姓名',
-    tel: '手機',
-    email: '信箱',
-    upload1: '上傳大頭貼 (150kb)',
-    upload1Span: '使用官方驗證規則， 圖片無法驗證 Heic',
-    upload2: '上傳大頭貼 (150kb)',
-    upload2Span: '自訂驗證檔案類型， 可上傳 Heic 檔',
-    btn: '送出'
+    name: '名前',
+    tel: '携帯電話',
+    email: 'メールボックス',
+    upload1: '写真ステッカーをアップロード (150kb)',
+    upload1Samll: 'カスタム認証ファイルの種類，',
+    upload1Span: '公式の検証ルールを使用して Heic を検証できない画像',
+    upload2: '写真ステッカーをアップロード (150kb)',
+    upload2Samll: 'Heicファイルをアップロードできます',
+    upload2Span: 'カスタム検証ファイル タイプ、アップロード Heic ファイル',
+    btn: '送信'
   }
 
 }

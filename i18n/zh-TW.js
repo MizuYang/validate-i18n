@@ -5,8 +5,10 @@ const tw = {
     tel: '手機',
     email: '信箱',
     upload1: '上傳大頭貼 (150kb)',
+    upload1Samll: '自訂驗證檔案類型，',
     upload1Span: '使用官方驗證規則， 圖片無法驗證 Heic',
     upload2: '上傳大頭貼 (150kb)',
+    upload2Samll: '可上傳 Heic 檔',
     upload2Span: '自訂驗證檔案類型， 可上傳 Heic 檔',
     btn: '送出'
   }
