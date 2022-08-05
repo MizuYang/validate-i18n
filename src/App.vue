@@ -2,7 +2,7 @@
   <div class="container py-5">
     <nav class="my-4">
         <router-link to="/">{{ $t('nav.page1') }}</router-link> |
-        <router-link to="/about">{{ $t('nav.page2') }}</router-link>
+        <router-link to="/questionSystem">{{ $t('nav.page2') }}</router-link>
     </nav>
     <div class="my-3">
       <button type="button" class="btn btn-primary btn-sm mx-1" @click="changeLang('zh-TW')">中文</button>
@@ -16,7 +16,9 @@
 
 <script>
 import { setLocale } from '@vee-validate/i18n'
-
+window.addEventListener('storage', () => {
+  console.log('local 變化')
+})
 export default {
   computed: {
   },

@@ -10,6 +10,10 @@ const language = {
 // //* 取得使用語言
 let lang = localStorage.getItem('lang') || navigator.language
 
+window.addEventListener('storage', () => {
+  console.log('local 變化')
+})
+
 //! 目前先這樣寫，連續去抓目前使用的語言
 //! 若有辦法能夠監聽 localStorage 或在切換語言時執行這支 JS 檔，來讓 lang 變數從 localStorage 抓到目前選擇的語言
 setInterval(() => {
