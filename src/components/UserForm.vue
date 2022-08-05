@@ -49,7 +49,6 @@
 </template>
 
 <script>
-import { setLocale } from '@vee-validate/i18n'
 
 export default {
   data () {
@@ -73,7 +72,6 @@ export default {
     //* 針對語系去讀取該語系的 feedback
     //* 一樣將日文、英文的 i18n 下載下來，將自己新增的規則名稱加上去
 
-    setLocale(this.lang)
   }
 }
 </script>
