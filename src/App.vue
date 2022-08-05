@@ -1,8 +1,8 @@
 <template>
   <div class="container py-5">
     <nav class="my-4">
-        <router-link to="/">資料登錄</router-link> |
-        <router-link to="/about">出題系統</router-link>
+        <router-link to="/">{{ $t('nav.page1') }}</router-link> |
+        <router-link to="/about">{{ $t('nav.page2') }}</router-link>
     </nav>
     <div class="my-3">
       <button type="button" class="btn btn-primary btn-sm mx-1" @click="changeLang('zh-TW')">中文</button>
@@ -47,6 +47,8 @@ export default {
   mounted () {
     const lang = localStorage.getItem('lang') || this.langListnavigator.language
     this.lang = this.langList[lang]
+    setLocale(lang) //* 設定表單驗證語系
+    this.$i18n.locale = lang //* 設定i18n 語系
   }
 }
 </script>
