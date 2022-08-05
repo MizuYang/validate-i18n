@@ -12,7 +12,10 @@ import { isPhone, isImage } from '../validate/rules'
 // 匯入多國語系的功能
 import { localize, setLocale } from '@vee-validate/i18n'
 // 匯入繁體中文語系檔案
-import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
+// import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
+import tw from '../validate/i18n/zh-TW.json'
+import en from '../validate/i18n/en-US.json'
+import ja from '../validate/i18n/ja-JP.json'
 
 import App from './App.vue'
 import router from './router'
@@ -30,7 +33,13 @@ defineRule('isImage', isImage)
 
 // 設定 vee-validate 全域規則
 configure({
-  generateMessage: localize({ zh_TW: zhTW }), // 載入繁體中文語系
+  generateMessage: localize(
+    {
+      'zh-TW': tw,
+      'en-US': en,
+      'ja-JP': ja
+
+    }), // 載入繁體中文語系
   // validateOnInput: true // 當輸入任何內容直接進行驗證
   //* 按送出才驗證
   validateOnBlur: false,
@@ -38,9 +47,7 @@ configure({
 
 })
 // 設定預設語系
-setLocale('zh_TW')
-
-// 要在 createApp 之下
+setLocale('zh-TW')
 
 const app = createApp(App)
 

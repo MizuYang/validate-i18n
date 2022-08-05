@@ -49,24 +49,31 @@
 </template>
 
 <script>
+import { setLocale } from '@vee-validate/i18n'
+
 export default {
   data () {
     return {
+      lang: localStorage.getItem('lang') || navigator.language,
       user: {
         email: ''
       }
     }
   },
   methods: {
-    up (e) {
-      console.log(e.target.files)
-    },
     onSubmit (values) {
       console.log(values)
       console.log(this.user)
     }
   },
   mounted () {
+    //* 起初先判斷使用語系，判斷後直接用 setLocale 做設定，並將使用語言存在 localStorage
+    //* 自訂規則需要製作不同語系
+    //* 在自訂驗證的 js 檔匯入所有語系的 JSON
+    //* 針對語系去讀取該語系的 feedback
+    //* 一樣將日文、英文的 i18n 下載下來，將自己新增的規則名稱加上去
+
+    setLocale(this.lang)
   }
 }
 </script>
