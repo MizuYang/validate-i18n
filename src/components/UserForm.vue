@@ -105,7 +105,7 @@ export default {
   transform: translateX(-50%);
   z-index: 1;
   background-color: #ffffff;
-  padding: 4px 500px;
+  padding: 4px 600px;
 }
 
 //* 覆蓋檔案上傳 "選擇檔案" 字樣
