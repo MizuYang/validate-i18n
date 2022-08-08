@@ -20,6 +20,29 @@ const en = {
       upload2Span: 'Heic files can be uploaded',
       btn: 'submit'
     }
+  },
+  page2: {
+    title: 'teacher question system',
+    form: {
+      examType: 'Exam Type',
+      subject: 'subject'
+    },
+    radioList: {
+      哲學: 'philosophy',
+      數學: 'math',
+      統計學: 'statistics',
+      藝術: 'Art',
+      化學: 'Chemical',
+      物理學: 'physics'
+    },
+    checkboxList: {
+      克漏字: 'gram',
+      選擇題: 'single choice',
+      是非題: 'true & false topic',
+      複選題: 'multiple choice',
+      填空題: 'fill in the blank',
+      寫作: 'writing'
+    }
   }
 
 }

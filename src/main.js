@@ -48,8 +48,6 @@ configure({
   validateOnChange: false
 
 })
-// 設定預設語系
-// setLocale('zh-TW')
 
 const app = createApp(App)
 
