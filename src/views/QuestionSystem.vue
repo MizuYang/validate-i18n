@@ -22,14 +22,14 @@
     </section>
 
     <!-- 難易度 -->
-    <Field class="form-control form-control-sm" :class="{ 'is-invalid': errors['select'] }" name="select2" as="select" rules="required" v-model="form.degree">
+    <Field class="form-control form-control-sm" :class="{ 'is-invalid': errors[$t('page2.form.selectErrFeedback')] }" :name="$t('page2.form.selectErrFeedback')" as="select" rules="required" v-model="form.degree">
       <option value="" selected disabled>{{ $t('page2.form.selectTitle') }}</option>
-      <option :value="twSelect" v-for="(langSelect, twSelect, index) in $tm('page2.selectList')" :key="`select${index+1}`" name="select">{{ langSelect }}</option>
+      <option :value="twSelect" v-for="(langSelect, twSelect, index) in $tm('page2.selectList')" :key="`select${index+1}`">{{ langSelect }}</option>
     </Field>
-    <small class="d-none text-danger d-inline-block my-2" ref="selectErrFeedback">{{ $t('page2.form.selectErrFeedback') }}</small>
+    <ErrorMessage :name="$t('page2.form.selectErrFeedback')" class="invalid-feedback"></ErrorMessage>
 
     <footer class="text-center my-3">
-      <button type="submit" class="btn btn-primary btn-sm" @click="validateSelect">{{ $t('page2.form.btn') }}</button>
+      <button type="submit" class="btn btn-primary btn-sm">{{ $t('page2.form.btn') }}</button>
     </footer>
   </Form>
 </template>
@@ -46,16 +46,7 @@ export default {
     }
   },
   methods: {
-    validateSelect () {
-      const validate = !!this.form.degree
-      if (!validate) {
-        this.$refs.selectErrFeedback.classList.remove('d-none')
-      } else {
-        this.$refs.selectErrFeedback.classList.add('d-none')
-      }
-    },
     onSubmit () {
-      console.log(this.useIsSubmitting)
       console.log(this.form)
     }
   },
