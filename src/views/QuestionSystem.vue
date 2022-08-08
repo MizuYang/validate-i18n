@@ -1,11 +1,19 @@
 <template>
   <h2>教師出題系統</h2>
-  <Form>
+  <Form v-slot="{ errors }" @submit="onSubmit">
+    <!-- 考試科目 -->
     <section class="my-3">
-      <label for="type1" class="form-label"></label>
-      <Field type="radio" class="form-control form-control-sm" :class="{ 'is-invalid': errors['考試類型'] }" id="type1" name="考試類型" rules="required" v-model="type"></Field>
-      <ErrorMessage name="考試類型" class="invalid-feedback"></ErrorMessage>
+      <h2>科目</h2>
+      <template v-for="(radio, index) in radioList" :key="`radio${index+1}`">
+        <Field type="radio" :class="{ 'is-invalid': errors['考試科目'] }" :id="`radio${index+1}`" name="考試科目" rules="required" :value="radio" v-model="form.type"></Field>
+        <label :for="`radio${index+1}`" class="form-label me-2">{{ radio }}</label>
+      </template>
+      <ErrorMessage name="考試科目" class="invalid-feedback"></ErrorMessage>
     </section>
+
+    <footer class="text-center my-3">
+      <button type="submit" class="btn btn-primary -btn-sm">送出</button>
+    </footer>
   </Form>
 </template>
 
@@ -14,8 +22,14 @@ export default {
   data () {
     return {
       form: {
-        type: []
-      }
+        type: ''
+      },
+      radioList: ['哲學', ' 數學', '統計學', ' 藝術', ' 化學', ' 物理學']
+    }
+  },
+  methods: {
+    onSubmit () {
+      console.log(this.form)
     }
   }
 }
