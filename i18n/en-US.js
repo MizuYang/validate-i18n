@@ -27,6 +27,7 @@ const en = {
       examType: 'Exam Type',
       subject: 'subject',
       selectTitle: 'Please select exam difficulty',
+      selectErrFeedback: 'Please select difficulty',
       btn: 'submit'
     },
     radioList: {

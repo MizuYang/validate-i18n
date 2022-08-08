@@ -54,7 +54,6 @@ const app = createApp(App)
 app.component('Form', Form) // eslint-disable-line
 app.component('Field', Field) // eslint-disable-line
 app.component('ErrorMessage', ErrorMessage)
-
 app.use(router)
 app.use(i18n)
 app.use(VueAxios, axios)

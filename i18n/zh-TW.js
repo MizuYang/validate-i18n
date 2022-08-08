@@ -28,6 +28,7 @@ const tw = {
       examType: '考試類型',
       subject: '科目',
       selectTitle: '請選擇考試難易度',
+      selectErrFeedback: '請選擇難易度',
       btn: '送出'
     },
     radioList: {

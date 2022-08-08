@@ -27,6 +27,7 @@ const ja = {
       examType: '試験の種類',
       subject: 'デパートメント',
       selectTitle: '試験の難易度を選択してください',
+      selectErrFeedback: '難易度を選択してください',
       btn: '送信'
     },
     radioList: {
