@@ -28,6 +28,7 @@ const en = {
       subject: 'subject',
       selectTitle: 'Please select exam difficulty',
       selectErrFeedback: 'Please select difficulty',
+      textareaTitle: 'words to students',
       btn: 'submit'
     },
     radioList: {

@@ -22,13 +22,13 @@ const tw = {
     }
   },
   page2: {
-    nav: ['首頁', '關於', '聯絡我們'],
     title: '教師出題系統',
     form: {
       examType: '考試類型',
       subject: '科目',
       selectTitle: '請選擇考試難易度',
       selectErrFeedback: '請選擇難易度',
+      textareaTitle: '給學生的話',
       btn: '送出'
     },
     radioList: {

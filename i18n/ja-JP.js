@@ -28,6 +28,7 @@ const ja = {
       subject: 'デパートメント',
       selectTitle: '試験の難易度を選択してください',
       selectErrFeedback: '難易度を選択してください',
+      textareaTitle: '学生への言葉',
       btn: '送信'
     },
     radioList: {
