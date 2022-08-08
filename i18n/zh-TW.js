@@ -26,7 +26,9 @@ const tw = {
     title: '教師出題系統',
     form: {
       examType: '考試類型',
-      subject: '科目'
+      subject: '科目',
+      selectTitle: '請選擇考試難易度',
+      btn: '送出'
     },
     radioList: {
       哲學: '哲學',
@@ -43,6 +45,11 @@ const tw = {
       複選題: '複選題',
       填空題: '填空題',
       寫作: '寫作'
+    },
+    selectList: {
+      困難: '困難',
+      普通: '普通',
+      簡單: '簡單'
     }
   }
 }

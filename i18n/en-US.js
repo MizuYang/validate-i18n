@@ -25,7 +25,9 @@ const en = {
     title: 'teacher question system',
     form: {
       examType: 'Exam Type',
-      subject: 'subject'
+      subject: 'subject',
+      selectTitle: 'Please select exam difficulty',
+      btn: 'submit'
     },
     radioList: {
       哲學: 'philosophy',
@@ -42,6 +44,11 @@ const en = {
       複選題: 'multiple choice',
       填空題: 'fill in the blank',
       寫作: 'writing'
+    },
+    selectList: {
+      困難: 'hard',
+      普通: 'normal',
+      簡單: 'Simple'
     }
   }
 

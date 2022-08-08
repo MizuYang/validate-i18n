@@ -21,8 +21,15 @@
       <ErrorMessage :name="$t('page2.form.examType')" class="invalid-feedback"></ErrorMessage>
     </section>
 
+    <!-- 難易度 -->
+    <Field class="form-control form-control-sm" name="select" as="select" v-model="form.degree">
+      <option value="" selected disabled>{{ $t('page2.form.selectTitle') }}</option>
+      <option :value="twSelect" v-for="(langSelect, twSelect, index) in $tm('page2.selectList')" :key="`select${index+1}`">{{ langSelect }}</option>
+    </Field>
+    <ErrorMessage name="select" class="invalid-feedback"></ErrorMessage>
+
     <footer class="text-center my-3">
-      <button type="submit" class="btn btn-primary btn-sm">送出</button>
+      <button type="submit" class="btn btn-primary btn-sm">{{ $t('page2.form.btn') }}</button>
     </footer>
   </Form>
 </template>
@@ -32,8 +39,9 @@ export default {
   data () {
     return {
       form: {
-        examType: [],
-        subject: ''
+        examType: [], //* 考試類型
+        subject: '', //* 科目
+        degree: '' //* 難度
       }
     }
   },
