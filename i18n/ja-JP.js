@@ -12,9 +12,13 @@ const ja = {
       telPlaceholder: '電話番号を入力してください',
       email: 'メールボックス',
       emailPlaceholder: 'メールアドレスを入力してください',
+      selectFile1: 'ファイルを選ぶ', //* 覆蓋選擇檔案字樣
+      neverSelect1: 'ファイルが選択されていません', //* 覆蓋未選擇任何檔案字樣
       upload1: '写真ステッカーをアップロード',
       upload1Samll: 'カスタム認証ファイルの種類，',
       upload1Span: '公式の検証ルールを使用して Heic を検証できない画像',
+      selectFile2: 'ファイルを選ぶ', //* 覆蓋選擇檔案字樣2
+      neverSelect2: 'ファイルが選択されていません', //* 覆蓋未選擇任何檔案字樣2
       upload2: '2写真ステッカーをアップロード',
       upload2Samll: 'Heicファイルをアップロードできます',
       upload2Span: 'カスタム検証ファイル タイプ、アップロード Heic ファイル',

@@ -12,9 +12,13 @@ const tw = {
       telPlaceholder: '請輸入手機',
       email: '信箱',
       emailPlaceholder: '請輸入信箱',
+      selectFile1: '選擇檔案', //* 覆蓋選擇檔案字樣
+      neverSelect1: '未選擇任何檔案', //* 覆蓋未選擇任何檔案字樣
       upload1: '上傳大頭貼',
       upload1Samll: '自訂驗證檔案類型，',
       upload1Span: '使用官方驗證規則， 圖片無法驗證 Heic',
+      selectFile2: '選擇檔案', //* 覆蓋選擇檔案字樣
+      neverSelect2: '未選擇任何檔案', //* 覆蓋未選擇任何檔案字樣
       upload2: '上傳大頭貼2',
       upload2Samll: '可上傳 Heic 檔',
       upload2Span: '自訂驗證檔案類型， 可上傳 Heic 檔',

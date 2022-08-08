@@ -12,9 +12,13 @@ const en = {
       telPlaceholder: 'Please enter your phone',
       email: 'email',
       emailPlaceholder: 'Please enter email',
+      selectFile1: 'Select file', //* 覆蓋選擇檔案字樣
+      neverSelect1: 'No file typeface selected', //* 覆蓋未選擇任何檔案字樣
       upload1: 'upload photo',
       upload1Samll: 'Use official validation rules',
       upload1Span: 'Image cannot be verified Heic',
+      selectFile2: 'Select file', //* 覆蓋選擇檔案字樣
+      neverSelect2: 'No file typeface selected', //* 覆蓋未選擇任何檔案字樣
       upload2: 'upload2 photo',
       upload2Samll: 'Custom Authentication File Type',
       upload2Span: 'Heic files can be uploaded',

@@ -28,7 +28,7 @@
       <small class="ms-3">{{ $t('page1.form.upload1Samll') }}
         <span class="text-danger">{{ $t('page1.form.upload1Span') }}</span>
       </small>
-      <Field type="file" class="form-control form-control-sm" :class="{ 'is-invalid': errors[$t('page1.form.upload1')] }" id="file" :name="$t('page1.form.upload1')" :rules="{required: true, mimes:['image/*'], size:150}" @change="upload1"></Field>
+      <Field type="file" class="form-control form-control-sm position-relative" :class="{ 'is-invalid': errors[$t('page1.form.upload1')] }" id="file1" :name="$t('page1.form.upload1')" :rules="{required: true, mimes:['image/*'], size:150}" @change="upload1" :data-selectFileLang1="$t('page1.form.selectFile1')" :data-neverSelectLang1="$t('page1.form.neverSelect1')"></Field>
       <ErrorMessage :name="$t('page1.form.upload1')" class="invalid-feedback"></ErrorMessage>
     </section>
 
@@ -38,7 +38,7 @@
       <small class="ms-3">{{ $t('page1.form.upload2Samll') }}
         <span class="text-success">{{ $t('page1.form.upload2Span') }}</span>
       </small>
-      <Field type="file" class="form-control form-control-sm" :class="{ 'is-invalid': errors[$t('page1.form.upload2')] }" id="file2" :name="$t('page1.form.upload2')" :rules="{required: true, isImage: true, size:150}" @change="upload2"></Field>
+      <Field type="file" class="form-control form-control-sm position-relative" :class="{ 'is-invalid': errors[$t('page1.form.upload2')] }" id="file2" :name="$t('page1.form.upload2')" :rules="{required: true, isImage: true, size:150}" @change="upload2" :data-selectFileLang2="$t('page1.form.selectFile2')" :data-neverSelectLang2="$t('page1.form.neverSelect2')"></Field>
       <ErrorMessage :name="$t('page1.form.upload2')" class="invalid-feedback"></ErrorMessage>
     </section>
 
@@ -59,10 +59,18 @@ export default {
   },
   methods: {
     upload1 (e) {
+      this.showUploadFile(e, 1)
       this.form.upload1 = e.target.files[0]
     },
     upload2 (e) {
+      this.showUploadFile(e, 2)
       this.form.upload2 = e.target.files[0]
+    },
+    showUploadFile (e, num) {
+      if (e.target.files[0]?.name) {
+        //* 若上傳檔案，將未選擇任何檔案改為上傳的檔案名稱
+        document.getElementById(`file${num}`).setAttribute(`data-neverSelectLang${num}`, e.target.files[0].name)
+      }
     },
     onSubmit (values) {
       console.log(values)
@@ -75,7 +83,46 @@ export default {
     //* 在自訂驗證的 js 檔匯入所有語系的 JSON
     //* 針對語系去讀取該語系的 feedback
     //* 一樣將日文、英文的 i18n 下載下來，將自己新增的規則名稱加上去
-
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@mixin coverSelectFileWord ($num) {
+  content: attr(data-selectFileLang#{$num}) "";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  z-index: 2;
+  background-color: #E9ECEF;
+  padding: 4px 10px;
+}
+@mixin coverNeverSelectFileWord ($num) {
+  content: attr(data-neverSelectLang#{$num}) "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 4px 150px;
+}
+
+//* 覆蓋檔案上傳 "選擇檔案" 字樣
+[data-selectFileLang1]::before {
+  @include coverSelectFileWord(1);
+}
+//* 覆蓋檔案上傳 "未選擇任何檔案" 字樣
+[data-neverSelectLang1]::after {
+  @include coverNeverSelectFileWord(1);
+}
+
+//* 覆蓋檔案上傳 "選擇檔案" 字樣 2
+[data-selectFileLang2]::before {
+  @include coverSelectFileWord(2);
+}
+//* 覆蓋檔案上傳 "未選擇任何檔案" 字樣 2
+[data-neverSelectLang2]::after {
+  @include coverNeverSelectFileWord(2);
+}
+</style>
